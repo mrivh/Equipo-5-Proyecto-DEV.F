@@ -10,11 +10,13 @@
 <body>
     <h1>Banco Mexicano DEVF</h1>
     <h3>Por favor seleccione la cuenta que desea accesar</h3>
-    <img src="personita 1.jpeg" alt="usuarioUno" Persona 1 >
-    <img src="personita 2.jpeg" alt="usuarioDos">
-    <img src="personita 3.jpeg" alt="usuarioTres">
-    <input type="Ingresar contraseña" name="contraseña" placeholder="Inserte contraseña">
-
+    <img src="personita 1.jpeg" alt="usuarioUno" onclick="Cuenta1()">
+    <img src="personita 2.jpeg" alt="usuarioDos" onclick="Cuenta2()">
+    <img src="personita 3.jpeg" alt="usuarioTres" onclick="Cuenta3()">
+    <input id="contraseña" type="password"  placeholder="Inserte contraseña">
+    <button onclick="Ingresar()">INGRESAR</button>
+    <span id="error"></span>
+    <script src="./app.js" defer></script>
 </body>
-<script src="app.js"></script>
+
 </html>
