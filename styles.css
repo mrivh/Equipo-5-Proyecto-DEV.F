@@ -1,0 +1,70 @@
+body {
+    background-image: url(fondo1.jpg);
+    background-position: center;
+    background-size: cover;
+    }
+  
+    #contraseña {
+        display: none;
+        width: 50vh;
+        height: 5vh;
+        border-radius: 10px;
+    } 
+
+    #btnPassword {
+        display: none;
+        border-radius: 10px;
+        width: 10vh;
+        height: 5vh;
+    } 
+
+    #error {
+        display: none;
+        background-color: black;
+        color: #64D9C5;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+  .contenedor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 0 8px;
+    background-color: rgb(56, 105, 70);  
+    width: 100%;
+    font-family: 'Anton', sans-serif;
+    font-size: 30px;
+    line-height: 1.5;
+    color: white;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .login {
+    width: 100%;
+      padding: 20px 0;
+    display: flex;
+    justify-content: space-evenly;
+      align-items: center
+  
+  }
+  
+  .indicaciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 100;
+    padding: 0 8px;
+    box-sizing: border-box;
+    width: 100%;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px rgb(97, 19, 19);
+  }

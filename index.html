@@ -5,17 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
     <title>Cajero</title>
-    <link href="styles.css" rel="stylessheet" type="text/css">
+    <link href="styles.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <h1>Banco Mexicano DEVF</h1>
-    <h3>Por favor seleccione la cuenta que desea accesar</h3>
-    <img src="personita 1.jpeg" alt="usuarioUno" onclick="Cuenta1()">
-    <img src="personita 2.jpeg" alt="usuarioDos" onclick="Cuenta2()">
-    <img src="personita 3.jpeg" alt="usuarioTres" onclick="Cuenta3()">
-    <input id="contraseña" type="password"  placeholder="Inserte contraseña">
-    <button onclick="Ingresar()">INGRESAR</button>
-    <span id="error"></span>
+    <header>
+        <div class="contenedor">
+            <h1>Banco Mexicano DEVF</h1>
+        </div>
+    </header>
+
+    <main>
+        <div>
+            <h2 class="indicaciones">Por favor seleccione la cuenta que desea accesar</h3>
+        </div>
+        <div class= "login">
+            <img src="personita4.png" alt="usuarioUno" onclick="Cuenta1()">
+            <img src="personita5.png" alt="usuarioDos" onclick="Cuenta2()">
+            <img src="personita6.png" alt="usuarioTres" onclick="Cuenta3()">
+            
+        </div>
+        <input id="contraseña" type="password"  placeholder="Inserte contraseña">
+        <button id="btnPassword" onclick="Ingresar()">INGRESAR</button>
+        <div id="error"></div>
+
+    </main>
+    
     <script src="./app.js" defer></script>
 </body>
 

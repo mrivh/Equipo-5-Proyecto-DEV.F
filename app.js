@@ -6,21 +6,27 @@ const cuentas = [
 
 
 let i=0
+let regex= /^[0-9]+$/
 
 //Elección de cuentas
 
 function Cuenta1(){
     i=0
+    document.getElementById("contraseña").style.display = 'block';
+    document.getElementById("btnPassword").style.display = 'block';
+    
 }
 
 function Cuenta2(){
     i=1
-    console.log(i)
+    document.getElementById("contraseña").style.display = 'block';
+    document.getElementById("btnPassword").style.display = 'block';
 }
 
 function Cuenta3(){
     i=2
-    console.log(i)
+    document.getElementById("contraseña").style.display = 'block';
+    document.getElementById("btnPassword").style.display = 'block';
 }
 
 //Parámetros de ingreso y alerta de contraseña inválida
@@ -31,6 +37,7 @@ function Ingresar(){
         window.location.href = "indexDos.html"
 
     }else{
+        document.getElementById("error").style.display = 'block';
         document.getElementById("error").innerHTML = "Contraseña incorrecta, revise sus datos y vuelva a ingresar"  
     }
 }
@@ -39,19 +46,21 @@ function Ingresar(){
 
 function Saldo(){
     document.getElementById("saldo").innerHTML = "Tu saldo es de $ " + cuentas[i].saldo + " MXN"
+    console.log (cuentas[i].saldo)
 }
 
 function Depositar(){
     const sumaDeposito = document.getElementById("depósito").value
     let suma = parseInt(sumaDeposito) + cuentas[i].saldo
    
-    if(suma > 990){
-        document.getElementById("alertaDeposito").innerHTML = "No se puede proceder a realizar tu depósito, realiza nuevamente la operación"
-        suma = 0
-    }else{
+    if(suma <= 990 && sumaDeposito.match(regex)){
         document.getElementById("depósito").style.display = 'none';
         document.getElementById("btnDeposito").style.display = 'none';
         document.getElementById("alertaDeposito").innerHTML = "Cantidad ingresada: $ " + sumaDeposito + " MXN " + "Saldo actual: $ " + suma + "MXN"
+    }else{
+        
+        document.getElementById("alertaDeposito").innerHTML = "No se puede proceder a realizar tu depósito, realiza nuevamente la operación"
+        suma = 0
     }
 }
 
@@ -59,12 +68,12 @@ function Retirar(){
     const restaRetiro = document.getElementById("retiro").value
     let resta= cuentas[i].saldo - parseInt(restaRetiro)
     
-    if(resta < 10){
-        document.getElementById("alertaRetiro").innerHTML = "No se puede proceder a realizar tu retiro, revisa nuevamente tu saldo"
-    }else{
+    if(resta >= 10 && restaRetiro.match(regex)){
         document.getElementById("retiro").style.display = 'none';
         document.getElementById("btnRetiro").style.display = 'none';
         document.getElementById("alertaRetiro").innerHTML = "Cantidad retirada: $ " + restaRetiro + " MXN " + "Saldo actual: $ " + resta + "MXN"
+    }else{
+        document.getElementById("alertaRetiro").innerHTML = "No se puede proceder a realizar tu retiro, revisa nuevamente tu saldo"
     }
 }
 
