@@ -14,15 +14,21 @@
 
     <title>Acciones</title>
 </head>
-<body>
-    <div >
-     <h1 class="text-center">Banco Mexicano DEVF</h1>
-     <h3 class="text-center mt">Seleccione la transacción</h3>
-     <div class="d-grid gap-2 col-6 mx-auto">
-     <button type="button" class="btn btn-outline-dark">Consultar saldo</button>
-     <button type="button" class="btn btn-outline-success">Ingresar monto</button>
-     <button type="button" class="btn btn-outline-primary">Retirar monto</button>
+<body class="bg-light">
+        <div class="m-5">
+          <h1 class="text-center fw-bolder text-primary">Banco Mexicano DEVF</h1>
+        </div>
+        <div class="m-5"> 
+          <h3 class="text-center fw-light">Seleccione la transacción</h3>
+        </div>
+
+     <div class="d-grid gap-2 col-5 mx-auto">
+     <button type="button" class="btn btn-outline-dark" onclick="Saldo()">Consultar saldo</button>
+     <button type="button" class="btn btn-outline-success" onclick="Pagedepositar()">Ingresar monto</button>
+     <button type="button" class="btn btn-outline-info" onclick="Pageretirar()">Retirar monto</button>
      </div>
-    </div>      
+     
+     <div id="saldo"></div>
+     <script src="./app.js" defer></script>
 </body>
 </html>
